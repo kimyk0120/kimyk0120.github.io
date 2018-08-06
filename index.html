@@ -26,7 +26,7 @@
   </head>
 
   <body>
-
+	
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
       <div class="container">
@@ -37,18 +37,18 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto" >
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a class="nav-link" href="index.html" >Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
-            </li>
-            <li class="nav-item">
+            </li> -->
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="views/about.html">About</a>
+            </li> -->
+            <!-- <li class="nav-item">
               <a class="nav-link" href="post.html">Sample Post</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
-            </li>
+            </li> -->
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="views/contact.html">Contact</a>
+            </li> -->
           </ul>
         </div>
       </div>
@@ -73,63 +73,55 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
-          <div class="post-preview">
-            <a href="post.html">
-              <h2 class="post-title">
-                Man must explore, and this is exploration at its greatest
-              </h2>
-              <h3 class="post-subtitle">
-                Problems look mighty small from 150 miles up
-              </h3>
-            </a>
-            <p class="post-meta">Posted by
-              <a href="#">Start Bootstrap</a>
-              on September 24, 2018</p>
+          
+          <!-- item -->
+          <!-- <div class="item" style="display: none;">
+	          <div class="post-preview">
+	            <a href="posts/post.html">
+	              <h2 class="post-title">
+	                깃허브 페이지 블로그 생성!(내용무)
+	              </h2>
+	              <h3 class="post-subtitle">
+	                드디어 미뤄두었던.. 프로젝트 별로 이슈들을 정리 할 블로그를 생성하였다.	              
+	              </h3>
+	            </a>
+	            <p class="post-meta">Posted by
+	              <a href="#">YoungKim</a>
+	              on Aug 6, 2018</p>
+	          </div>
+	          <hr>
+          </div> -->
+          <!-- .item -->
+          
+          
+          <!-- item -->
+          <div class="item" style="display: none;">
+	          <div class="post-preview">
+	            <a href="posts/post.html">
+	              <h2 class="post-title">
+	                깃허브 페이지 블로그 생성!(내용무)
+	              </h2>
+	              <h3 class="post-subtitle">
+	                드디어 미뤄두었던.. 프로젝트 별로 이슈들을 정리 할 블로그를 생성하였다.	              
+	              </h3>
+	            </a>
+	            <p class="post-meta">Posted by
+	              <a href="#">YoungKim</a>
+	              on Aug 6, 2018</p>
+	          </div>
+	          <hr>
           </div>
-          <hr>
-          <div class="post-preview">
-            <a href="post.html">
-              <h2 class="post-title">
-                I believe every human has a finite number of heartbeats. I don't intend to waste any of mine.
-              </h2>
-            </a>
-            <p class="post-meta">Posted by
-              <a href="#">Start Bootstrap</a>
-              on September 18, 2018</p>
-          </div>
-          <hr>
-          <div class="post-preview">
-            <a href="post.html">
-              <h2 class="post-title">
-                Science has not yet mastered prophecy
-              </h2>
-              <h3 class="post-subtitle">
-                We predict too much for the next year and yet far too little for the next ten.
-              </h3>
-            </a>
-            <p class="post-meta">Posted by
-              <a href="#">Start Bootstrap</a>
-              on August 24, 2018</p>
-          </div>
-          <hr>
-          <div class="post-preview">
-            <a href="post.html">
-              <h2 class="post-title">
-                Failure is not an option
-              </h2>
-              <h3 class="post-subtitle">
-                Many say exploration is part of our destiny, but it’s actually our duty to future generations.
-              </h3>
-            </a>
-            <p class="post-meta">Posted by
-              <a href="#">Start Bootstrap</a>
-              on July 8, 2018</p>
-          </div>
-          <hr>
+          <!-- .item -->
+         
+      
+          
+          
           <!-- Pager -->
-          <div class="clearfix">
-            <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
+          <div class="clearfix" id="olderPostViewBtn">
+            <a class="btn btn-primary float-right" style="color: #f9f9f9;">Older Posts &rarr;</a>
           </div>
+          
+          
         </div>
       </div>
     </div>
@@ -179,7 +171,30 @@
 
     <!-- Custom scripts for this template -->
     <script src="js/clean-blog.min.js"></script>
-
+<script type="text/javascript">
+(function(){
+	$(document).ready(function(){
+		const itemList = $(".item");
+		
+		$(itemList).each(function(index){
+			var thisEl = $(this);
+			if(index < 5){
+				$(thisEl).css("display","");
+			}
+		});
+		
+		$("#olderPostViewBtn").on("click",function(){
+			$(itemList).each(function(index){
+				var thisEl = $(this);
+				if(index > 5){+
+					$(thisEl).css("display","");
+				}
+			});
+		})
+		
+	});//endDomready
+})();//endWinonLoad
+</script>	
   </body>
 
 </html>
