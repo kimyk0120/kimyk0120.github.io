@@ -1,3 +1,15 @@
+@font-face {
+	font-family:'dduk';
+	src:url('fonts/SDKukdetopokki-aLt.otf');
+	
+}
+@font-face {
+	font-family:'gomaum';
+	src:url('fonts/godoMaum.ttf'); 
+}
+
+
+
 body {
   font-size: 20px;
   color: #212529;
