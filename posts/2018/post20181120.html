@@ -82,7 +82,7 @@
             </p>
 			
             <p style="font-size: small;">
-            	 <span class="bgOn">DELIMITER $$</span><br>
+            	 <span class="bgOn">DELIMITER $$</span>&emsp; /* DELIMITER는 프로시저 앞,뒤의 위치하여 안에 있는 부분은  한번에 실행될 수 있게 하는 역할을 한다. */<br>
             	 <span class="bgOn">DROP PROCEDURE IF EXISTS loopInsert $$ </span>&emsp; // 같은 이름의 PROCEDURE를 삭제한다.<br>
             	 <span class="bgOn">CREATE PROCEDURE loopInsert() </span>&emsp; // loopIndert  만들기<br>
             	 <span class="bgOn">BEGIN</span><br>
