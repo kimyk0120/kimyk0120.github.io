@@ -41,7 +41,7 @@ JAVA를 사용한 영상처리 및 오디오 처리를 위해 사용할 때 편�
     
                 //audio recorder，extractAudio:audio path，2:channels
                 FFmpegFrameRecorder recorder = new FFmpegFrameRecorder(extractAudio, 2);
-                recorder.setAudioOption("crf", "0");
+                recorder.setAudioOption("crf", "0");  // 가변 비트레이트 화질우선 인코딩"방식
                 recorder.setAudioQuality(0);
                 //bit rate
                 recorder.setAudioBitrate(192000);
